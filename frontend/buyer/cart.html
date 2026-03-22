@@ -83,7 +83,7 @@ function App() {
 
         {cart.length === 0 ? (
           <div className="text-center py-24">
-            <div className="text-7xl mb-5">🛒</div>
+            <div className="text-7xl mb-5"></div>
             <h2 className="font-display text-2xl font-bold text-gray-700 mb-2">Your cart is empty</h2>
             <p className="text-gray-400 mb-6">Add some products to get started!</p>
             <a href="products.html" className="inline-block px-8 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-700 transition-all">Browse Products</a>
@@ -144,8 +144,11 @@ function App() {
           </div>
         )}
       </main>
-      <footer className="bg-gray-900 py-4 mt-auto">
-        <p className="text-center text-xs text-gray-500">© 2025 FiberNest. For educational purposes only, and no copyright infringement is intended.</p>
+      <footer className="bg-gray-900 py-6 mt-auto">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
+          <img src="../assets/img/teamlogo.png" alt="Team Logo" className="h-16 w-auto" />
+          <p className="text-center text-xs text-gray-500">© 2025 FiberNest. For educational purposes only, and no copyright infringement is intended.</p>
+        </div>
       </footer>
     </div>
   );

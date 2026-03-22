@@ -121,6 +121,13 @@ function Navbar() {
   const [search, setSearch] = useState("");
   const user = Api.getUser();
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCartCount(Api.cart.count());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const handleSearch = (e) => {
     if (e.key === "Enter" && search.trim()) {
       window.location.href = `products.html?search=${encodeURIComponent(search.trim())}`;
@@ -346,6 +353,7 @@ function Categories() {
 function FeaturedProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [toast, setToast] = useState("");
   useEffect(() => {
     Api.get("/products?limit=4&featured=true")
       .then(d => setProducts(d.slice ? d.slice(0,4) : d.products?.slice(0,4) || []))
@@ -357,7 +365,12 @@ function FeaturedProducts() {
       ]))
       .finally(() => setLoading(false));
   }, []);
-  const addToCart = (p) => { Api.cart.add(p); alert(`${p.name} added to cart!`); };
+  const addToCart = (p) => {
+    Api.cart.add(p);
+    setCartCount(Api.cart.count());
+    setToast(p.name);
+    setTimeout(() => setToast(""), 3000);
+  };
   const EMOJIS = ["🧱","🌿","🏠","🌱","📦","🥥","🌾","♻️"];
   return (
     <section className="py-20 bg-cream">
@@ -455,6 +468,10 @@ function Footer() {
             <a key={l} href={h} className="block text-sm text-gray-400 hover:text-white mb-2 transition-colors">{l}</a>
           ))}
         </div>
+        <div className="mb-4">
+            <img src="../assets/img/teamlogo.png" alt="Team Logo" className="h-16 w-auto mb-3" />
+            <span className="font-display font-bold text-lg">FiberNest</span>
+          </div>
         <div>
           <p className="font-semibold text-sm mb-3 text-gray-300">Contact</p>
           <p className="text-sm text-gray-400">📍 Philippines</p>

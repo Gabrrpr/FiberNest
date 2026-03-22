@@ -1,4 +1,4 @@
-# 🌿 FiberNest
+# FiberNest
 
 A full-stack e-commerce web application for selling eco-friendly coconut coir products made in the Philippines.
 
@@ -6,13 +6,13 @@ A full-stack e-commerce web application for selling eco-friendly coconut coir pr
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 FiberNest is a complete e-commerce platform built as a requirement under E-commerce course. It features a buyer-facing storefront and a seller dashboard, backed by a FastAPI REST API and a PostgreSQL database hosted on Supabase.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -24,7 +24,7 @@ FiberNest is a complete e-commerce platform built as a requirement under E-comme
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 FiberNest/
@@ -80,7 +80,7 @@ FiberNest/
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Python 3.11
@@ -129,7 +129,7 @@ Or use VS Code Live Server extension for best results.
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description | Auth |
 |--------|----------|-------------|------|
@@ -152,7 +152,7 @@ Or use VS Code Live Server extension for best results.
 
 ---
 
-## 👥 Demo Accounts
+## Demo Accounts
 
 | Role | Email | Password |
 |------|-------|----------|
@@ -161,7 +161,7 @@ Or use VS Code Live Server extension for best results.
 
 ---
 
-## 🚫 .gitignore
+## .gitignore
 
 Make sure these are in your `.gitignore` before pushing:
 ```
@@ -174,17 +174,16 @@ __pycache__/
 
 ---
 
-## 👨‍💻 Group Members
+## Group Members
 
-- *(Mapoy, Pauline Erika)*
-- *(Ibarrientos, Forest Red)*
-- *(Julius De leon)*
-- *(Batac, John Gabriel)*
-
+- *Mapoy, Pauline Erika*
+- *Ibarrientos, Forest Red*
+- *Julius De leon*
+- *Batac, John Gabriel*
 
 ---
 
-## 📝 Notes
+## Notes
 
 - The frontend uses React and Tailwind via CDN — no `npm install` or build step required.
 - All pages are standalone `.html` files that communicate with the FastAPI backend via `fetch()`.
