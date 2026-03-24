@@ -12,7 +12,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { display: ["'Playfair Display'","serif"], sans: ["'DM Sans'","sans-serif"], inter: ["'Inter'","sans-serif"]},
+          fontFamily: { display: ["'Inter'","serif"], sans: ["'DM Sans'","sans-serif"], inter: ["'Inter'","sans-serif"]},
           colors: { sage: { DEFAULT:"#7a8c6e", dark:"#5a6b50", light:"#c5d0bc" }, cream:"#f8f5f0", tan:"#e8dfd0", brown:"#6b4f3a" }
         }
       }
@@ -55,12 +55,12 @@
 </head>
 <body class="bg-cream font-sans">
 <div id="root"></div>
-<script type="text/babel">
+<script type="text/babel" >
 const { useState, useEffect, useRef } = React;
 
 // ── Slideshow data ──────────────────────────────────────────
 const SLIDES = [
-  {
+  {                                                                                                                                                                                                         
     badge:    "🇵🇭 Proudly Philippine-Made",
     title:    ["Natural Coir", "Products", "for Every Need"],
     titleStyle:"font-inter italic font-light",
@@ -470,7 +470,6 @@ function Footer() {
         </div>
         <div className="mb-4">
             <img src="../assets/img/teamlogo.png" alt="Team Logo" className="h-16 w-auto mb-3" />
-            <span className="font-display font-bold text-lg">FiberNest</span>
           </div>
         <div>
           <p className="font-semibold text-sm mb-3 text-gray-300">Contact</p>
