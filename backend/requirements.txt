@@ -22,6 +22,7 @@ pydantic==2.7.1
 pydantic-settings==2.2.1
 pydantic-core==2.7.1
 
+
 # CORS (built into FastAPI, but listed for clarity)
 # Already included with fastapi
 
