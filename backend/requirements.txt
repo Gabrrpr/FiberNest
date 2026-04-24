@@ -30,3 +30,5 @@ pydantic-core==2.7.1
 
 #asldkasnlsakdnasldkasdnlaksnd
 ##asdasdolaskdnladksanldk
+
+#for the streak po again
